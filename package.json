@@ -1,11 +1,11 @@
 {
-  "name": "vite-vanilla-app-template",
+  "name": "ImajiCoffee",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vite-vanilla-app-template/",
+    "build": "vite build --base=/ImajiCoffee/",
     "preview": "vite preview"
   },
   "devDependencies": {

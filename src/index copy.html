@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>landing page</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="main navigation">
+      <p class=" header_nav_logo">IMAJI<span> Coffee.</span></p>
+      <div class="header_nav_menu_and_buttons">
+        <ul class="desktop header_nav_menu">
+          <li>
+            <a class="header_nav_menu_item" href="/Home/">Home</a>
+            <div class="line"></div>
+          </li>
+          <li>
+            <a class="header_nav_menu_item" href="/Story/">Story</a>
+            <div class="line"></div>
+          </li>
+          <li>
+            <a class="header_nav_menu_item" href="/Menu/">Menu</a>
+            <div class="line active"></div>
+          </li>
+          <li>
+            <a class="header_nav_menu_item" href="/Space/">Space</a>
+            <div class="line"></div>
+          </li>
+          <li>
+            <a class="header_nav_menu_item" href="/Community/">Community</a>
+            <div class="line"></div>
+          </li>
+          <li>
+            <a class="header_nav_menu_item" href="/News/">News</a>
+            <div class="line"></div>
+          </li>
+        </ul>
+        <div class="desktop">
+          <button class="header_nav_menu_button_cart" aria-label="Cart, contains x items">Cart
+            (<span>2</span>)</button>
+          <button class="header_nav_menu_button_sign_in">Sign in</button>
+        </div>
+        <div class="mobile">
+          <button class="header_nav_menu_mob_cart" aria-label="Cart, contains x items">
+            <svg class="shopping-basket" width="20" height="20">
+              <use href="./images/icons.svg#icon-shopping-basket" />
+            </svg>
+          </button>
+          <button class="header_nav_menu_mob_menu" aria-label="Mobile menu">
+            <svg class="menu-right" width="20" height="20">
+              <use href="./images/icons.svg#icon-menu-right" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- add class="visually_hidden" , if need menu detail -->
+    <div class=" landing_page_desktop_our_menu_tabs_1_2_3">
+      <section class="heading">
+        <h1>Our Menu</h1>
+        <p>
+          IMAJI Coffee provides a variety of high quality coffee and drinks and flavors that are suitable for
+          you to support and cheer up your day. We also provide coffee to accompany you at home along with the
+          equipment.
+        </p>
+      </section>
+      <section class="content">
+        <form class="filter_form">
+          <div class="filter_search">
+            <div class="filter_box">
+              <label for="search">Search</label>
+              <button type="button" aria-label="clear search field">Clear</button>
+            </div>
+            <input type="text" id="search" name="search" placeholder="Enter keyword">
+          </div>
+          <div class="filter_price">
+            <div class="filter_box">
+              <label for="price">Price</label>
+              <button type="button" aria-label="clear price field">Clear</button>
+            </div>
+            <select id="price" name="price">
+              <option value="Under $10">Under $10</option>
+              <option value="Under $10">Under $10</option>
+              <option value="Under $10">Under $10</option>
+            </select>
+          </div>
+          <div class="filter_sort_by">
+            <div class="filter_box">
+              <label for="sort_by">Sort By</label>
+              <button type="button" aria-label="clear sortBy field">Clear</button>
+            </div>
+            <select id="sort_by" name="sort_by">
+              <option value="bestSelling">Best Selling</option>
+              <option value="bestSelling">Best Selling</option>
+              <option value="bestSelling">Best Selling</option>
+            </select>
+          </div>
+        </form>
+      </section>
+      <section class="tabs">
+        <div role="tablist" aria-label="Menu categories">
+          <button class="tabs_button" role="tab" aria-selected="false" tabindex="-1" id="tab-coffee-beverage"
+            aria-controls="panel-coffee-beverage">
+            coffe and bavarage
+          </button>
+          <button class="tabs_button" role="tab" aria-selected="true" id="tab-food-snack"
+            aria-controls="panel-food-snack">
+            food and snack
+          </button>
+          <button class="tabs_button" role="tab" aria-selected="false" tabindex="-1" id="tab-at-home"
+            aria-controls="panel-at-home">
+            imaji coffee at home
+          </button>
+        </div>
+      </section>
+      <section class="all_products">
+        <div class="visually_hidden" role="tabpanel" id="panel-coffee-beverage" aria-labelledby="tab-coffee-beverage">
+          <ul class="list_products">
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/ristrettoBianco.jpg" alt="Cup of Ristretto Bianco with two cookies" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Ristretto Bianco</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/icedCreamyLatte.jpg" alt="Tall glass of layered iced latte" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Iced Creamy Latte</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/cappuccino.jpg" alt="Cup of cappuccino with foam art on a wood table" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Cappuccino</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/icedLongBlack.jpg" alt="Tall glass of iced long black with a straw" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Iced Long Black</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/milkCoffeeRegal.jpg" alt="milk Coffee Regal" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>milk coffee regal</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/orangeJuice.jpg" alt="Orange juice" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Orange juice</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/sodaBeverage.jpg" alt="Soda Beverage" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Soda Beverage</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/icedCoffeeWithMilk.jpg" alt="ICED Coffee with milk" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>ICED Coffee with milk</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/icefAmericano.jpg" alt="ICED AMERICANO" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>ICED AMERICANO</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/veganIcedLatte.jpg" alt="vegan iced latte" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>vegan iced latte</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/icedChocholate.jpg" alt="ICED CHOCOLATE" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>ICED CHOCOLATE</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/autumnalCoffee.jpg" alt="Autumnal coffee" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Autumnal coffee</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="" role="tabpanel" id="panel-food-snack" aria-labelledby="tab-food-snack">
+          <ul class="list_products">
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/seaFoodLunch.jpg"
+                    alt="Close-up of spaghetti with seafood, mussels, and cilantro in a ceramic bowl" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>SEA FOOD LUNCH</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/frenchToastWithSugar.jpg"
+                    alt="French toast slices topped with powdered sugar and cinnamon" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>French toast WITH SUGAR</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/chocolateCroissant.jpg" alt="Chocolate croissants garnished with white flowers"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>CHOCOLATE CROISSANT</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/potatoWedges.jpg"
+                    alt="Crispy baked or fried potato wedges seasoned with herbs, served with a small bowl of ketchup"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>POTATO WEDGES</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/brownies.jpg"
+                    alt="Four rich fudgy chocolate brownies on a wooden platter next to a cup of black coffee and a bowl of chocolate chip cookies"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>BROWNIES</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/bananaCake.jpg"
+                    alt="Two slices of banana bread or cake with nuts and chocolate chips on a small white plate held by two hands with dark blue nail polish"
+                    width="300" height="300">
+                  <img class="overlay" src="./images/overlayOutOfStock.png" alt="25 percent transparent black overlay"
+                    width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>BANANA CAKE</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/sandwichesAndPickles.jpg"
+                    alt="A club sandwich with ham, cheese, lettuce, and onions cut in half on a wooden cutting board with two dill pickles"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Sandwiches And Pickles</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/spaghettiBolognese.jpg"
+                    alt="Spaghetti with rich Bolognese sauce topped with dried herbs and served on a white plate garnished with three cherry tomatoes"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Spaghetti Bolognese</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/sandwichVegan.jpg"
+                    alt="A thick vegan sandwich on seeded whole-wheat bread with a patty, avocado spread, sprouts, cucumber, and colorful vegetables on a wooden board"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>Sandwich Vegan</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/eggsBenedictBurger.jpg"
+                    alt="Gourmet Eggs Benedict style burger with a thick beef patty, melted cheese, ham, a poached egg, and hollandaise sauce dripping down"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>eggs Benedict Burger</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/cornCheeseSandwich.jpg"
+                    alt="Close-up of spaghetti with seafood, mussels, and cilantro in a ceramic bowl" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>corn Cheese Sandwich</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/buttermilkWaffle.jpg"
+                    alt="Close-up of spaghetti with seafood, mussels, and cilantro in a ceramic bowl" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>buttermilk Waffle</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="visually_hidden" role="tabpanel" id="panel-at-home" aria-labelledby="tab-at-home">
+          <ul class="list_products">
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/atHomeHouseBlend.jpg" alt="Black and dark blue bag of IMAJI Coffee House Blend"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>at home house blend</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/atHomeArabica.jpg" alt="Black and brown bag of IMAJI Coffee Arabica" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>at home arabica</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/atHomeClassic.jpg" alt="Black and green bag of IMAJI Coffee Classic single origin"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>at home classic</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/whiteMug.jpg"
+                    alt="Plain white ceramic coffee mug sitting on a light wooden surface in a blurred cafe setting"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>white mug</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/atHomeKalosi.jpg"
+                    alt="Four rich fudgy chocolate brownies on a wooden platter next to a cup of black coffee and a bowl of chocolate chip cookies"
+                    width="300" height="300">
+                  <img class="overlay" src="./images/overlayOutOfStock.png" alt="25 percent transparent black overlay"
+                    width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>at home kalosi</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/atHomeLuwak.jpg" alt="Black and dark brown bag of IMAJI Coffee Luwak" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>at home luwak</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/atHomeRobusta.jpg"
+                    alt="Black and tan bag of IMAJI Coffee Robusta ground coffee beans" width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>at home robusta</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/coffeeTemper58mm.jpg"
+                    alt="Two professional black and stainless steel coffee tampers on a light wooden surface against a yellow background"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>coffee temper 58 mm</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$5.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/frenchPress8cups.jpg"
+                    alt="Bodum French press coffee maker filled with coffee on a wooden tray in a bright cafe setting"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>french press 8 cups</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$25.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/glassTeaPotTeiera.jpg"
+                    alt="Clear glass teapot filled with dark brewed tea and dried fruit slices on a light grey background"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>glass tea pot teiera (6 cups)</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$13.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/frenchPress3cup.jpg"
+                    alt="Copper-colored stainless steel French press coffee maker on a wooden stool against a light gray background"
+                    width="300" height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>french press 3 cup</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$20.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <div class="visually_hidden sale_badge">
+                  <p>sale</p>
+                </div>
+              </article>
+            </li>
+            <li class="product_card">
+              <article>
+                <div class="product_image">
+                  <img src="./images/mokaPot.jpg"
+                    alt="Black matte moka pot with a wooden handle and knob on a plain white background" width="300"
+                    height="300">
+                  <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                    alt="25 percent transparent black overlay" width="300" height="300">
+                </div>
+                <div class="product_card_name">
+                  <h3>moka pot</h3>
+                  <p>Only at Cafe and Delivery</p>
+                </div>
+                <div class="price-promo">
+                  <div class="price">
+                    <p>$20.00</p>
+                    <p class="visually_hidden crossed_out">$6.00</p>
+                  </div>
+                  <p class="visually_hidden promo">Get 20% Off in App</p>
+                </div>
+                <div class="visually_hidden out_of_stock_badge">
+                  <p>Out of Stock</p>
+                </div>
+                <p class="visually_hidden sale_badge">sale</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="buttons">
+        <button class="bottom_list_products_button">load more</button>
+      </section>
+    </div>
+    <!-- remove visually_hidden, if need menu detail -->
+    <section class="visually_hidden landing_page_desktop_menu_detail">
+      <section class="menu_detail">
+        <div class="menu_detail_main_image">
+          <img src="./images/atHomeClassicBig.jpg" alt="Black and green bag of IMAJI Coffee Classic single origin"
+            width="468">
+        </div>
+        <ul class="menu_detail_image_list">
+          <li><img src="./images/menuDetailImage1.jpg" alt="Black and green bag of IMAJI Coffee El. Azul" width="157"
+              height="164"></li>
+          <li><img src="./images/menuDetailImage2.jpg" alt="Glass of black coffee on a bright green saucer with a spoon"
+              width="157" height="164">
+          </li>
+          <li><img src="./images/menuDetailImage3.jpg"
+              alt="Barista pouring water from a kettle into a pour-over coffee device" width="157" height="164"></li>
+          <li><img src="./images/menuDetailImage4.jpg"
+              alt="Close-up of a Chemex coffee maker with a filter and brewing coffee" width="157" height="164"></li>
+        </ul>
+        <div class="menu_detail_right">
+          <nav class="menu_detail_right_bread_crumb" aria-label="bread crumb">
+            <a href="/">Home</a>
+            <div>
+              <svg class="angle-right-small" width="6" height="10">
+                <use href="./images/icons.svg#icon-angle-right-small" />
+              </svg>
+            </div>
+            <a href="/menu">Menu</a>
+            <div>
+              <svg class="angle-right-small" width="6" height="10">
+                <use href="./images/icons.svg#icon-angle-right-small" />
+              </svg>
+            </div>
+            <a href="/Details">Details</a>
+          </nav>
+          <div class="menu_detail_right_name">
+            <h3>At Home - Classic</h3>
+            <div class="price-promo">
+              <div class="price">
+                <p>$4.00</p>
+                <p class="crossed_out">$5.00</p>
+              </div>
+              <p class="promo">Get 20% Off in App</p>
+            </div>
+          </div>
+          <div class="menu_detail_right_desc">
+            <p class="title">Description:</p>
+            <p class="text">An all-time favorite blend with citrus fruit character, caramel flavors, and a
+              pleasant faintly floral aroma.</p>
+            <p class="title">Locked scent:</p>
+            <p class="text">Excelso prevents air from entering the packaging with a locked aroma, ensuring
+              the coffee's
+              freshness. </p>
+            <p class="title">Storage Way:</p>
+            <p class="text">To maintain the taste of coffee and the freshness of the aroma, store Excelso
+              coffee in an
+              airtight. </p>
+            <a href="">Read less</a>
+          </div>
+          <div class="menu_detail_right_buttons">
+            <button class="button_add_cart">Add to Cart</button>
+            <div class="button_with">
+              <button aria-label="Reduce quantity">
+                <svg class="minus" width="16" height="16">
+                  <use href="./images/icons.svg#icon-minus" />
+                </svg>
+              </button>
+              <p>1</p>
+              <button aria-label="Increase quantity">
+                <svg class="minus" width="16" height="16">
+                  <use href="./images/icons.svg#icon-plus" />
+                </svg>
+              </button>
+            </div>
+            <button class="button_buy_it_now">buy it now</button>
+          </div>
+        </div>
+      </section>
+      <section class="menu_list">
+        <h2>you may also like</h2>
+        <ul class="menu_list_flex">
+          <li class="product_card">
+            <article>
+              <div class="product_image">
+                <img src="./images/atHomeHouseBlend.jpg" alt="Black and dark blue bag of IMAJI Coffee House Blend"
+                  width="262">
+                <img class="overlay" src="./images/overlayOutOfStock.png" alt="25 percent transparent black overlay"
+                  width="262">
+              </div>
+              <div class="product_card_name">
+                <h3>at home house blend</h3>
+                <p>available bye <span>at</span> website</p>
+              </div>
+              <div class="price-promo">
+                <div class="price">
+                  <p>$5.00</p>
+                  <p class="crossed_out">$6.00</p>
+                </div>
+                <p class="promo">Get 20% Off in App</p>
+              </div>
+              <div class="visually_hidden out_of_stock_badge">
+                <p>Out of Stock</p>
+              </div>
+              <p class="sale_badge">sale</p>
+            </article>
+          </li>
+          <li class="product_card">
+            <article>
+              <div class="product_image">
+                <img src="./images/atHomeArabica.jpg" alt="Black and brown bag of IMAJI Coffee Arabica" width="262">
+                <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                  alt="25 percent transparent black overlay" width="262">
+              </div>
+              <div class="product_card_name">
+                <h3>at home arabica</h3>
+                <p>available bye <span>at</span> website</p>
+              </div>
+              <div class="price-promo">
+                <div class="price">
+                  <p>$5.00</p>
+                  <p class="crossed_out">$6.00</p>
+                </div>
+                <p class="promo">Get 20% Off in App</p>
+              </div>
+              <div class="visually_hidden out_of_stock_badge">
+                <p>Out of Stock</p>
+              </div>
+              <p class="sale_badge">sale</p>
+            </article>
+          </li>
+          <li class="product_card">
+            <article>
+              <div class="product_image">
+                <img src="./images/atHomeLuwak.jpg" alt="Black and dark brown bag of IMAJI Coffee Luwak" width="262">
+                <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                  alt="25 percent transparent black overlay" width="262">
+              </div>
+              <div class="product_card_name">
+                <h3>at home luwak</h3>
+                <p>available bye <span>at</span> website</p>
+              </div>
+              <div class="price-promo">
+                <div class="price">
+                  <p>$5.00</p>
+                  <p class="crossed_out">$6.00</p>
+                </div>
+                <p class="promo">Get 20% Off in App</p>
+              </div>
+              <div class="visually_hidden out_of_stock_badge">
+                <p>Out of Stock</p>
+              </div>
+              <p class="sale_badge">sale</p>
+            </article>
+          </li>
+          <li class="product_card">
+            <article>
+              <div class="product_image">
+                <img src="./images/atHomeLuwak.jpg" alt="Black and dark brown bag of IMAJI Coffee Luwak" width="262">
+                <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                  alt="25 percent transparent black overlay" width="262">
+              </div>
+              <div class="product_card_name">
+                <h3>at home luwak</h3>
+                <p>available bye <span>at</span> website</p>
+              </div>
+              <div class="price-promo">
+                <div class="price">
+                  <p>$5.00</p>
+                  <p class="crossed_out">$6.00</p>
+                </div>
+                <p class="promo">Get 20% Off in App</p>
+              </div>
+              <div class="visually_hidden out_of_stock_badge">
+                <p>Out of Stock</p>
+              </div>
+              <p class="sale_badge">sale</p>
+            </article>
+          </li>
+        </ul>
+        <div class="menu_List_paging">
+          <svg class="icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-pading" />
+          </svg>
+          <svg class="icon active" width="16" height="16">
+            <use href="./images/icons.svg#icon-pading" />
+          </svg>
+          <svg class="icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-pading" />
+          </svg>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <div class="footer_content">
+      <h3>Our Location</h3>
+      <address>
+        <p>Jl. Bangkringan No 19, RT.11/RW.2, Kota Surabaya, 60124</p>
+        <p><span class="padding bold">Customer Service</span> +6282-2876-6862</p>
+        <p><span class="bold">We Are Open from</span> Sun - Mon 10 AM - 22 PM</p>
+      </address>
+      <div class="line"></div>
+      <div class="social_media">
+        <nav aria-label="Social networks">
+          <a href="/spotify.com">
+            <svg class="spotify" width="24" height="24">
+              <use href="./images/icons.svg#icon-spotify" />
+            </svg>
+          </a>
+          <a href="/instagram.com">
+            <svg class="instagram" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram" />
+            </svg>
+          </a>
+          <a href="/tiktok.com">
+            <svg class="tiktok" width="24" height="24">
+              <use href="./images/icons.svg#icon-tiktok" />
+            </svg>
+          </a>
+          <a href="/youtube.com">
+            <svg class="youtube" width="24" height="24">
+              <use href="./images/icons.svg#icon-youtube" />
+            </svg>
+          </a>
+          <a href="/twitter.com">
+            <svg class="twitter" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter" />
+            </svg>
+          </a>
+          <a href="/telegram.com">
+            <svg class="telegram" width="24" height="24">
+              <use href="./images/icons.svg#icon-telegram" />
+            </svg>
+          </a>
+        </nav>
+        <nav aria-label="links to download applications">
+          <p>Delivery Order</p>
+          <div class="links_download_applications">
+            <a href="/appStore.com">
+              <svg class="app-store" width="134" height="40">
+                <use href="./images/icons/svg/app-store.svg#app-store" />
+              </svg>
+            </a>
+            <a href="/googlePlay.com">
+              <svg class="google-play" width="134" height="40">
+                <use href="./images/icons/svg/google-play.svg#google-play" />
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="copy_right">
+        <p>© 2023 <span>imaji coffee</span>, All rights reserved</p>
+        <div class="term_and_conditions">
+          <a href="/Terms/">Terms and Conditions</a>
+          <span aria-hidden="true">|</span>
+          <a href="/Policy/">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="./main.js" defer></script>
+</body>
+
+</html>
