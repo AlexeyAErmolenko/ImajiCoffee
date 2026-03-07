@@ -1,16 +1,50 @@
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+<header>
+  <nav aria-label="main navigation">
+    <p class=" header_nav_logo">IMAJI<span> Coffee.</span></p>
+    <div class="header_nav_menu_and_buttons">
+      <ul class="desktop header_nav_menu">
+        <li>
+          <a class="header_nav_menu_item" href="/Home/">Home</a>
+          <div class="line"></div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li>
+          <a class="header_nav_menu_item" href="/Story/">Story</a>
+          <div class="line"></div>
+        </li>
+        <li>
+          <a class="header_nav_menu_item" href="/Menu/">Menu</a>
+          <div class="line active"></div>
+        </li>
+        <li>
+          <a class="header_nav_menu_item" href="/Space/">Space</a>
+          <div class="line"></div>
+        </li>
+        <li>
+          <a class="header_nav_menu_item" href="/Community/">Community</a>
+          <div class="line"></div>
+        </li>
+        <li>
+          <a class="header_nav_menu_item" href="/News/">News</a>
+          <div class="line"></div>
         </li>
       </ul>
-    </nav>
-  </div>
+      <div class="desktop">
+        <button class="header_nav_menu_button_cart" aria-label="Cart, contains x items">Cart
+          (<span>2</span>)</button>
+        <button class="header_nav_menu_button_sign_in">Sign in</button>
+      </div>
+      <div class="mobile">
+        <button class="header_nav_menu_mob_cart" aria-label="Cart, contains x items">
+          <svg class="shopping-basket" width="20" height="20">
+            <use href="../images/icons/sprite.svg#icon-shopping-basket" />
+          </svg>
+        </button>
+        <button class="header_nav_menu_mob_menu" aria-label="Mobile menu">
+          <svg class="menu-right" width="20" height="20">
+            <use href="../images/icons/sprite.svg#icon-menu-right" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
 </header>

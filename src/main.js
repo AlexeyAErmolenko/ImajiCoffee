@@ -1,587 +1,4 @@
-const products = [
-  {
-    id: 1,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373706/ristrettoBianco_sqtj8t.jpg',
-    alt: 'Cup of Ristretto Bianco with two cookies',
-    name: 'Ristretto Bianco',
-    availability: 'Only at Cafe and Delivery',
-    price: 8.0,
-    originalPrice: 10.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: false,
-    createdAt: '2024-05-08T16:12:14.954208',
-  },
-  {
-    id: 2,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373665/icedCreamyLatte_xfcm7h.jpg',
-    alt: 'Tall glass of layered iced latte',
-    name: 'Iced Creamy Latte',
-    availability: 'Only at Cafe and Delivery',
-    price: 12.0,
-    originalPrice: 15.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: true,
-    createdAt: '2024-06-14T10:22:41.381921',
-  },
-  {
-    id: 3,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373631/cappuccino_nrxtuk.jpg',
-    alt: 'Cup of cappuccino with foam art on a wood table',
-    name: 'Cappuccino',
-    availability: 'Only at Cafe and Delivery',
-    price: 6.0,
-    originalPrice: 8.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: false,
-    createdAt: '2024-07-01T08:55:19.742310',
-  },
-  {
-    id: 4,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373665/icedLongBlack_w8bpll.jpg',
-    alt: 'Tall glass of iced long black with a straw',
-    name: 'Iced Long Black',
-    availability: 'Only at Cafe and Delivery',
-    price: 7.0,
-    originalPrice: 9.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: true,
-    createdAt: '2024-05-22T15:41:08.119002',
-  },
-  {
-    id: 5,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373687/milkCoffeeRegal_d1eocc.jpg',
-    alt: 'Iced milk drink topped with broken golden biscuits in a clear glass on a wooden surface',
-    name: 'Milk Coffee Regal',
-    availability: 'Only at Cafe and Delivery',
-    price: 11.0,
-    originalPrice: 14.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: false,
-    createdAt: '2024-08-09T11:17:56.660118',
-  },
-  {
-    id: 6,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373701/orangeJuice_wcso1q.jpg',
-    alt: 'Tall glass of fresh orange juice garnished with an orange slice and a straw',
-    name: 'Orange Juice',
-    availability: 'Only at Cafe and Delivery',
-    price: 9.0,
-    originalPrice: 12.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: true,
-    createdAt: '2024-06-03T09:30:44.501239',
-  },
-  {
-    id: 7,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373512/sodaBeverage_fkzyd4.jpg',
-    alt: 'Two glasses of sparkling pink beverage with ice, lemon slices, and blueberries',
-    name: 'Soda beverage',
-    availability: 'Only at Cafe and Delivery',
-    price: 5.0,
-    originalPrice: 7.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: false,
-    createdAt: '2024-07-27T13:09:02.887451',
-  },
-  {
-    id: 8,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373664/icedCoffeeWithMilk_c87cas.jpg',
-    alt: 'Crispy herb-seasoned potato wedges with a small bowl of ketchup in a square container',
-    name: 'Iced Coffee with Milk',
-    availability: 'Only at Cafe and Delivery',
-    price: 10.0,
-    originalPrice: 13.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: true,
-    createdAt: '2024-05-19T18:48:26.320904',
-  },
-  {
-    id: 9,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373666/icefAmericano_ss3zp9.jpg',
-    alt: 'Fresh coffee pouring into a tall glass with ice on a wooden outdoor table',
-    name: 'Iced Americano',
-    availability: 'Only at Cafe and Delivery',
-    price: 13.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-06-25T12:36:10.902134',
-  },
-  {
-    id: 10,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373514/veganIcedLatte_nsev7o.jpg',
-    alt: 'Tall glass of iced latte with many ice cubes on a dark wooden surface',
-    name: 'Vegan Iced Latte',
-    availability: 'Only at Cafe and Delivery',
-    price: 14.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-08-02T10:05:55.118772',
-  },
-  {
-    id: 11,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373663/icedChocholate_skaqqb.jpg',
-    alt: 'Glass of iced chocolate drink topped with foam and chocolate shavings on a wooden coaster',
-    name: 'Iced Chocolate',
-    availability: 'Only at Cafe and Delivery',
-    price: 8.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-05-31T16:29:41.700221',
-  },
-  {
-    id: 12,
-    category: 'beverage',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373620/autumnalCoffee_zyuo7l.jpg',
-    alt: 'Glass mug of coffee topped with whipped cream, caramel drizzle, and cinnamon on a gold tray',
-    name: 'Autumnal Coffee',
-    availability: 'Only at Cafe and Delivery',
-    price: 15.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-09-01T09:14:03.541991',
-  },
-
-  // FOOD
-  {
-    id: 13,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373719/seaFoodLunch_mbkh6t.jpg',
-    alt: 'Close-up of spaghetti with seafood, mussels, and cilantro in a ceramic bowl',
-    name: 'Seafood Lunch',
-    availability: 'Only at Cafe and Delivery',
-    price: 12.0,
-    originalPrice: 15.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: false,
-    createdAt: '2024-06-10T13:44:22.665103',
-  },
-  {
-    id: 14,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373656/frenchToastWithSugar_m6cmhe.jpg',
-    alt: 'French toast slices topped with powdered sugar and cinnamon',
-    name: 'French Toast with Sugar',
-    availability: 'Only at Cafe and Delivery',
-    price: 7.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-07-18T08:58:41.199004',
-  },
-  {
-    id: 15,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373633/chocolateCroissant_yhhdur.jpg',
-    alt: 'Chocolate croissants garnished with white flowers',
-    name: 'Chocolate Croissant',
-    availability: 'Only at Cafe and Delivery',
-    price: 6.0,
-    originalPrice: 9.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: true,
-    createdAt: '2024-05-15T07:22:59.440912',
-  },
-  {
-    id: 16,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373705/potatoWedges_g4judb.jpg',
-    alt: 'Crispy baked or fried potato wedges seasoned with herbs, served with a small bowl of ketchup',
-    name: 'Potato Wedges',
-    availability: 'Only at Cafe and Delivery',
-    price: 5.0,
-    originalPrice: 7.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: false,
-    createdAt: '2024-06-29T14:11:08.772104',
-  },
-  {
-    id: 17,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373626/brownies_rjy4zs.jpg',
-    alt: 'Four rich fudgy chocolate brownies on a wooden platter next to a cup of black coffee and a bowl of chocolate chip cookies',
-    name: 'Brownies',
-    availability: 'Only at Cafe and Delivery',
-    price: 8.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-08-06T17:03:44.110822',
-  },
-  {
-    id: 18,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373623/bananaCake_e9lwvs.jpg',
-    alt: 'Two slices of banana bread or cake with nuts and chocolate chips on a small white plate held by two hands with dark blue nail polish',
-    name: 'Banana Cake',
-    availability: 'Only at Cafe and Delivery',
-    price: 10.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: false,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-07-04T12:40:19.550201',
-  },
-  {
-    id: 19,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373712/sandwichesAndPickles_xvpu02.jpg',
-    alt: 'A club sandwich with ham, cheese, lettuce, and onions cut in half on a wooden cutting board with two dill pickles',
-    name: 'Sandwiches and Pickles',
-    availability: 'Only at Cafe and Delivery',
-    price: 11.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-05-26T10:19:55.900774',
-  },
-  {
-    id: 20,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373513/spaghettiBolognese_krwcxa.jpg',
-    alt: 'Spaghetti with rich Bolognese sauce topped with dried herbs and served on a white plate garnished with three cherry tomatoes',
-    name: 'Spaghetti Bolognese',
-    availability: 'Only at Cafe and Delivery',
-    price: 14.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-08-14T18:01:27.332190',
-  },
-  {
-    id: 21,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373715/sandwichVegan_c6lxi7.jpg',
-    alt: 'A thick vegan sandwich on seeded whole-wheat bread with a patty, avocado spread, sprouts, cucumber, and colorful vegetables on a wooden board',
-    name: 'Sandwich Vegan',
-    availability: 'Only at Cafe and Delivery',
-    price: 13.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-06-17T09:55:03.772001',
-  },
-  {
-    id: 22,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373639/eggsBenedictBurger_n0utmp.jpg',
-    alt: 'Gourmet Eggs Benedict style burger with a thick beef patty, melted cheese, ham, a poached egg, and hollandaise sauce dripping down',
-    name: 'Eggs Benedict Burger',
-    availability: 'Only at Cafe and Delivery',
-    price: 15.0,
-    originalPrice: 18.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: false,
-    createdAt: '2024-07-23T11:08:44.910028',
-  },
-  {
-    id: 23,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373639/cornCheeseSandwich_nu2bku.jpg',
-    alt: 'Close-up of spaghetti with seafood, mussels, and cilantro in a ceramic bowl',
-    name: 'Corn Cheese Sandwich',
-    availability: 'Only at Cafe and Delivery',
-    price: 9.0,
-    originalPrice: 12.0,
-    isPromo: true,
-    inStock: true,
-    onSale: true,
-    isBestSelling: true,
-    createdAt: '2024-05-20T15:47:36.661120',
-  },
-  {
-    id: 24,
-    category: 'food',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373628/buttermilkWaffle_fedn22.jpg',
-    alt: 'Chocolate chip buttermilk waffles topped with fresh strawberries and powdered sugar',
-    name: 'Buttermilk Waffle',
-    availability: 'Only at Cafe and Delivery',
-    price: 8.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-08-18T09:22:10.340882',
-  },
-
-  // HOME
-  {
-    id: 25,
-    category: 'home',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373610/atHomeHouseBlend_otvns8.jpg',
-    alt: 'Black and dark blue bag of IMAJI Coffee House Blend',
-    name: 'At Home House Blend',
-    availability: 'Available Buy at Website',
-    price: 15.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-06-06T12:18:54.110902',
-  },
-  {
-    id: 26,
-    category: 'home',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373603/atHomeArabica_hk0t20.jpg',
-    alt: 'Black and brown bag of IMAJI Coffee Arabica',
-    name: 'At Home Arabica',
-    availability: 'Available Buy at Website',
-    price: 12.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-07-12T10:09:41.881220',
-  },
-  {
-    id: 27,
-    category: 'home',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373605/atHomeClassic_ntb4ck.jpg',
-    alt: 'Black and green bag of IMAJI Coffee Classic single origin',
-    name: 'At Home Classic',
-    availability: 'Only at Cafe and Delivery',
-    price: 14.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-05-29T14:36:00.220911',
-  },
-  {
-    id: 28,
-    category: 'home',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373612/atHomeKalosi_i8kfz1.jpg',
-    alt: 'Four rich fudgy chocolate brownies on a wooden platter next to a cup of black coffee and a bowl of chocolate chip cookies',
-    name: 'At Home Kalosi',
-    availability: 'Only at Cafe and Delivery',
-    price: 13.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: false,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-08-03T16:55:13.772009',
-  },
-  {
-    id: 29,
-    category: 'home',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373615/atHomeLuwak_iuoa2b.jpg',
-    alt: 'Black and dark brown bag of IMAJI Coffee Luwak',
-    name: 'At Home Luwak',
-    availability: 'Only at Cafe and Delivery',
-    price: 15.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-06-21T11:33:47.552211',
-  },
-  {
-    id: 30,
-    category: 'home',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373617/atHomeRobusta_ykkrdm.jpg',
-    alt: 'Black and tan bag of IMAJI Coffee Robusta ground coffee beans',
-    name: 'At Home Robusta',
-    availability: 'Only at Cafe and Delivery',
-    price: 11.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-07-30T09:58:22.990114',
-  },
-
-  // EQUIPMENT
-  {
-    id: 31,
-    category: 'equipment',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373517/whiteMug_eb9f2b.jpg',
-    alt: 'Plain white ceramic coffee mug sitting on a light wooden surface in a blurred cafe setting',
-    name: 'White Mug',
-    availability: 'Only at Cafe and Delivery',
-    price: 6.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-05-24T10:44:01.119004',
-  },
-  {
-    id: 32,
-    category: 'equipment',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373637/coffeeTemper58mm_oibisb.jpg',
-    alt: 'Two professional black and stainless steel coffee tampers on a light wooden surface against a yellow background',
-    name: 'Coffee Temper 58 mm',
-    availability: 'Only at Cafe and Delivery',
-    price: 12.0,
-    originalPrice: null,
-    isPromo: true,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-06-11T13:09:33.881224',
-  },
-  {
-    id: 33,
-    category: 'equipment',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373651/frenchPress8cups_tpoxul.jpg',
-    alt: 'Bodum French press coffee maker filled with coffee on a wooden tray in a bright cafe setting',
-    name: 'French Press 8 Cups',
-    availability: 'Only at Cafe and Delivery',
-    price: 15.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-07-16T15:28:44.110902',
-  },
-  {
-    id: 34,
-    category: 'equipment',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373657/glassTeaPotTeiera_xqytp5.jpg',
-    alt: 'Clear glass teapot filled with dark brewed tea and dried fruit slices on a light grey background',
-    name: 'Glass Tea Pot Teiera (6 Cups)',
-    availability: 'Only at Cafe and Delivery',
-    price: 13.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-08-05T12:01:18.662019',
-  },
-  {
-    id: 35,
-    category: 'equipment',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373639/frenchPress3cup_wpbv90.jpg',
-    alt: 'Copper-colored stainless steel French press coffee maker on a wooden stool against a light gray background',
-    name: 'French Press 3 Cup',
-    availability: 'Only at Cafe and Delivery',
-    price: 10.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: true,
-    onSale: false,
-    isBestSelling: true,
-    createdAt: '2024-06-28T09:46:02.501221',
-  },
-  {
-    id: 36,
-    category: 'equipment',
-    image:
-      'https://res.cloudinary.com/dserfv7z4/image/upload/v1770373697/mokaPot_senghb.jpg',
-    alt: 'Black matte moka pot with a wooden handle and knob on a plain white background',
-    name: 'Moka Pot',
-    availability: 'Only at Cafe and Delivery',
-    price: 14.0,
-    originalPrice: null,
-    isPromo: false,
-    inStock: true,
-    onSale: false,
-    isBestSelling: false,
-    createdAt: '2024-08-20T14:32:55.910003',
-  },
-];
+import api from './services/api.js';
 
 const listProducts = document.querySelector('.list_products');
 const filterTabs = document.querySelector('.tabs');
@@ -593,10 +10,77 @@ const emptyListProductsContainer = document.querySelector(
   '.empty_list_products'
 );
 
-let currCategory = 'beverage';
-let currSearch = '';
-let currPrice = 'all';
-let currSort = 'best-selling';
+let items = [];
+let currCategory = 'beverage'; // tab
+let currSearch = ''; // input
+let currPrice = 'all'; // select Price
+let currSort = 'best-selling'; // select Sort By
+
+/** Renders the item cards into the DOM */
+const renderUI = data => {
+  listProducts.innerHTML = '';
+
+  const filteredByPrice = data.filter(item => {
+    const price = parseFloat(item.price);
+    if (currPrice === 'all') return true;
+    if (currPrice === '0-10') return price < 10;
+    if (currPrice === '10-plus') return price >= 10;
+    return true;
+  });
+
+  if (filteredByPrice.length > 0) {
+    emptyListProductsContainer.classList.add('visually_hidden');
+    listProducts.innerHTML = filteredByPrice
+      .map(item => createItemCard(item))
+      .join('');
+  } else {
+    emptyListProductsContainer.classList.remove('visually_hidden');
+  }
+};
+
+/** Main function to load items with current filters */
+const loadItems = async () => {
+  const queryParams = {
+    category: currCategory,
+  };
+
+  if (currSearch.trim() !== '') {
+    queryParams.name = currSearch.trim();
+  }
+
+  switch (currSort) {
+    case 'price-asc':
+      queryParams.sortBy = 'price';
+      queryParams.order = 'asc';
+      break;
+    case 'price-desc':
+      queryParams.sortBy = 'price';
+      queryParams.order = 'desc';
+      break;
+    case 'newest':
+      queryParams.sortBy = 'createdAt';
+      queryParams.order = 'desc';
+      break;
+  }
+
+  try {
+    const data = await api.getAll(queryParams);
+    if (currSort === 'best-selling') {
+      data.sort((a, b) => Number(b.isBestSelling) - Number(a.isBestSelling));
+    }
+
+    renderUI(data);
+  } catch (error) {
+    console.error('Failed to load products:', error);
+    listProducts.innerHTML =
+      '<li>Error loading menu. Please try again later.</li>';
+  }
+};
+
+searchInput.addEventListener('input', event => {
+  currSearch = event.target.value;
+  loadItems();
+});
 
 filterTabs.addEventListener('click', event => {
   const button = event.target.closest('button');
@@ -612,12 +96,17 @@ filterTabs.addEventListener('click', event => {
   button.setAttribute('aria-selected', 'true');
 
   currCategory = category;
-  renderProducts();
+  loadItems();
 });
 
-searchInput.addEventListener('input', event => {
-  currSearch = event.target.value;
-  renderProducts();
+filterForm.addEventListener('change', event => {
+  const select = event.target.closest('select');
+  if (!select) return;
+
+  if (select.id === 'price-selector') currPrice = select.value;
+  if (select.id === 'sort-selector') currSort = select.value;
+
+  loadItems();
 });
 
 filterForm.addEventListener('click', event => {
@@ -625,139 +114,80 @@ filterForm.addEventListener('click', event => {
   if (!button) return;
 
   const type = button.dataset.clear;
-  switch (type) {
-    case 'search':
-      searchInput.value = '';
-      currSearch = '';
-      break;
-
-    case 'price':
-      changeSelect.value = 'all';
-      currPrice = 'all';
-      break;
-
-    case 'sort':
-      sortSelect.value = 'best-selling';
-      currSort = 'best-selling';
-      break;
-
-    default:
-      return;
+  if (type === 'search') {
+    searchInput.value = '';
+    currSearch = '';
+  }
+  if (type === 'price') {
+    changeSelect.value = 'all';
+    currPrice = 'all';
+  }
+  if (type === 'sort') {
+    sortSelect.value = 'best-selling';
+    currSort = 'best-selling';
   }
 
-  renderProducts();
+  loadItems();
 });
 
-filterForm.addEventListener('change', event => {
-  const select = event.target.closest('select');
-  if (!select) return;
+/** Generates HTML string for a single product card */
+const createItemCard = item => {
+  const price =
+    typeof item.price === 'number' ? item.price : parseFloat(item.price) || 0;
+  const originalPrice = item.originalPrice
+    ? parseFloat(item.originalPrice)
+    : null;
 
-  switch (select.id) {
-    case 'price-selector':
-      currPrice = select.value;
-      break;
-
-    case 'sort-selector':
-      currSort = select.value;
-      break;
-
-    default:
-      return;
-  }
-
-  renderProducts();
-});
-
-const createProductCard = product => {
   return `
-    <li class="product_card" data-category="${product.category}">
+    <li class="product_card" data-category="${item.category}">
       <article>
         <div class="product_image">
-          <img src="${product.image}" alt="${product.alt}" width="300" height="300">
+          <img src="${item.image}" alt="${item.alt}" width="300" height="300">
           ${
-            !product.inStock
+            !item.inStock
               ? `<img class="overlay" src="https://res.cloudinary.com/dserfv7z4/image/upload/v1770373518/overlayOutOfStock_mxenki.png"
             alt="25 percent transparent black overlay" width="300" height="300">`
               : ''
           }
         </div>
         <div class="product_card_name">
-          <h3>${product.name}</h3>
-          <p>${product.availability}</p>
+          <h3>${item.name}</h3>
+          <p>${item.availability}</p>
         </div>
         <div class="price-promo">
           <div class="price">
-            <p>$${product.price.toFixed(2)}</p>
+            <p>$${price.toFixed(2)}</p>
             ${
-              product.originalPrice != null
-                ? `<p class="crossed_out">$${product.originalPrice.toFixed(2)}</p>`
+              originalPrice != null
+                ? `<p class="crossed_out">$${originalPrice.toFixed(2)}</p>`
                 : ''
             }
           </div>
-          ${product.isPromo ? `<p class="promo">Get 20% Off in App</p>` : ''}
+          ${item.isPromo ? `<p class="promo">Get 20% Off in App</p>` : ''}
         </div>
         ${
-          !product.inStock
+          !item.inStock
             ? `<div class="out_of_stock_badge">
           <p>Out of Stock</p>
           </div>`
             : ''
         }
-         ${product.onSale ? `<p class="sale_badge">sale</p>` : ''}
+        ${item.onSale ? `<p class="sale_badge">sale</p>` : ''}
       </article>
     </li>
   `;
 };
 
-const renderProducts = () => {
-  const filteredProducts = products.filter(p => {
-    const isInputMatched = p.name
-      .toLowerCase()
-      .includes(currSearch.toLowerCase());
-
-    const isCategoriesMatched = p.category === currCategory;
-
-    let isPriceMatched = false;
-    if (currPrice === 'all') {
-      isPriceMatched = true;
-    } else if (currPrice === '0-10') {
-      isPriceMatched = p.price < 10;
-    } else if (currPrice === '10-plus') {
-      isPriceMatched = p.price >= 10;
-    }
-    return isInputMatched && isCategoriesMatched && isPriceMatched;
-  });
-
-  const sortedProduct = [...filteredProducts].sort((a, b) => {
-    switch (currSort) {
-      case 'best-selling':
-        if (a.isBestSelling !== b.isBestSelling) {
-          return Number(b.isBestSelling) - Number(a.isBestSelling);
-        }
-        return 0; // we keep the starting order
-
-      case 'price-asc':
-        return a.price - b.price;
-
-      case 'price-desc':
-        return b.price - a.price;
-
-      case 'newest':
-        return new Date(b.createdAt) - new Date(a.createdAt);
-
-      default:
-        return 0;
-    }
-  });
-
-  listProducts.innerHTML = '';
-  if (sortedProduct.length !== 0) {
-    emptyListProductsContainer.classList.add('visually_hidden');
-    listProducts.innerHTML = sortedProduct
-      .map(p => createProductCard(p))
-      .join('');
-  } else {
-    emptyListProductsContainer.classList.remove('visually_hidden');
+// async function loadProducts() {
+async function loadProducts(params = { category: currCategory }) {
+  try {
+    items = await api.getAll();
+    loadItems();
+  } catch (error) {
+    console.error('Failed to load products:', error);
+    listProducts.innerHTML = '<p>Error loading menu</p>';
   }
-};
-renderProducts();
+}
+
+// Initial load
+document.addEventListener('DOMContentLoaded', loadProducts);
