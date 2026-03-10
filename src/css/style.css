@@ -297,6 +297,15 @@ h1 {
 /* --------------------------------------------------------------------------------------- */
 .tabs div[role="tablist"] {
   display: flex;
+  overflow-x: auto;
+  /* Дозволяє свайпати таби на мобільці */
+  scrollbar-width: none;
+  /* Приховуємо скролбар для Firefox */
+}
+
+.tabs div[role="tablist"]::-webkit-scrollbar {
+  display: none;
+  /* Приховуємо скролбар для Chrome/Safari */
 }
 
 .tabs button {
@@ -316,11 +325,26 @@ h1 {
   color: #f14c35;
 }
 
+.tabs button.active {
+  color: #121212;
+}
+
 .tabs button[aria-selected="true"] {
   border-bottom: 1px solid #121212;
   border-top: 1px solid #121212;
 }
 
+/* .tab_item.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #121212; // Лінія під активним табом
+} */
+
+*/
 /* --------------------------------------------------------------------------------------- */
 
 /* --------------------------------------------------------------------------------------- */
