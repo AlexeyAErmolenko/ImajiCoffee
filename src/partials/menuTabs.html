@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="landing_page_desktop_our_menu_tabs_1_2_3">
+    <section class="heading">
+      <h1>Our Menu</h1>
+      <p>
+        IMAJI Coffee provides a variety of high quality coffee and drinks and flavors that are suitable for
+        you to support and cheer up your day. We also provide coffee to accompany you at home along with the
+        equipment.
+      </p>
+    </section>
+    <section class="content">
+      <form class="filter_form">
+        <div class="filter_search">
+          <div class="filter_box">
+            <label for="search-input">Search</label>
+            <button type="button" data-clear="search" aria-label="clear search field">Clear</button>
+          </div>
+          <input type="text" id="search-input" name="search" placeholder="Enter keyword">
+        </div>
+        <div class="filter_price">
+          <div class="filter_box">
+            <label for="price-select">Price</label>
+            <button type="button" data-clear="price" aria-label="clear price field">Clear</button>
+          </div>
+          <select id="price-selector" data-select="price-select" name="price">
+            <option value="all">All price</option>
+            <option value="0-10">Under $10</option>
+            <option value="10-plus">$10 over</option>
+          </select>
+        </div>
+        <div class="filter_sort_by">
+          <div class="filter_box">
+            <label for="sort-selector">Sort By</label>
+            <button type="button" data-clear="sort" aria-label="clear sortBy field">Clear</button>
+          </div>
+          <select id="sort-selector" name="sort_by">
+            <option value="best-selling">Best Selling</option>
+            <option value="price-asc">From cheap to expensive</option>
+            <option value="price-desc">From expensive to cheap</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </form>
+    </section>
+    <section class="tabs">
+      <div role="tablist" aria-label="Menu categories">
+        <button class="tabs_button" role="tab" aria-selected="true" id="tab-coffee-beverage"
+          aria-controls="panel-coffee-beverage" data-category="beverage">
+          coffee and beverage
+        </button>
+        <button class="tabs_button" role="tab" aria-selected="false" tabindex="-1" id="tab-food-snack"
+          aria-controls="panel-food-snack" data-category="food">
+          food and snack
+        </button>
+        <button class="tabs_button" role="tab" aria-selected="false" tabindex="-1" id="tab-at-home"
+          aria-controls="panel-at-home" data-category="home">
+          imaji coffee at home
+        </button>
+      </div>
+    </section>
+    <section class="all_products">
+      <ul class="list_products">
+        <!-- js add list products -->
+      </ul>
+      <div class="empty_list_products visually_hidden">Try changing filters or searching by a different name</div>
+    </section>
+    <section class="buttons">
+      <button class="bottom_list_products_button">load more</button>
+    </section>
+  </div>
+</div>
