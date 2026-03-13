@@ -8,13 +8,13 @@
     integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>IMAJI Coffee App</title>
-  <script type="module" crossorigin src="/ImajiCoffee/assets/main-22d7D3uc.js"></script>
-  <link rel="stylesheet" crossorigin href="/ImajiCoffee/assets/main-mgUD58q3.css">
+  <script type="module" crossorigin src="/ImajiCoffee/assets/main-DUL9epLh.js"></script>
+  <link rel="stylesheet" crossorigin href="/ImajiCoffee/assets/styles-Ce-2KeN7.css">
 </head>
 
 <body>
   <header>
-  <nav aria-label="main navigation">
+  <nav aria-label=" main navigation">
     <p class=" header_nav_logo">IMAJI<span> Coffee.</span></p>
     <div class="header_nav_menu_and_buttons">
       <ul class="desktop header_nav_menu">
@@ -64,264 +64,266 @@
   </nav>
 </header>
   <main>
-    <!-- add class="visually_hidden" , if need menu detail -->
-    <div class="landing_page_desktop_our_menu_tabs_1_2_3">
-      <section class="heading">
-        <h1>Our Menu</h1>
-        <p>
-          IMAJI Coffee provides a variety of high quality coffee and drinks and flavors that are suitable for
-          you to support and cheer up your day. We also provide coffee to accompany you at home along with the
-          equipment.
-        </p>
-      </section>
-      <section class="content">
-        <form class="filter_form">
-          <div class="filter_search">
-            <div class="filter_box">
-              <label for="search-input">Search</label>
-              <button type="button" data-clear="search" aria-label="clear search field">Clear</button>
-            </div>
-            <input type="text" id="search-input" name="search" placeholder="Enter keyword">
+    <div class="container">
+  <div class="landing_page_desktop_our_menu_tabs_1_2_3">
+    <section class="heading">
+      <h1>Our Menu</h1>
+      <p>
+        IMAJI Coffee provides a variety of high quality coffee and drinks and flavors that are suitable for
+        you to support and cheer up your day. We also provide coffee to accompany you at home along with the
+        equipment.
+      </p>
+    </section>
+    <section class="content">
+      <form class="filter_form">
+        <div class="filter_search">
+          <div class="filter_box">
+            <label for="search-input">Search</label>
+            <button type="button" data-clear="search" aria-label="clear search field">Clear</button>
           </div>
-          <div class="filter_price">
-            <div class="filter_box">
-              <label for="price-select">Price</label>
-              <button type="button" data-clear="price" aria-label="clear price field">Clear</button>
-            </div>
-            <select id="price-selector" data-select="price-select" name="price">
-              <option value="all">All price</option>
-              <option value="0-10">Under $10</option>
-              <option value="10-plus">$10 over</option>
-            </select>
-          </div>
-          <div class="filter_sort_by">
-            <div class="filter_box">
-              <label for="sort-selector">Sort By</label>
-              <button type="button" data-clear="sort" aria-label="clear sortBy field">Clear</button>
-            </div>
-            <select id="sort-selector" name="sort_by">
-              <option value="best-selling">Best Selling</option>
-              <option value="price-asc">From cheap to expensive</option>
-              <option value="price-desc">From expensive to cheap</option>
-              <option value="newest">Newest</option>
-            </select>
-          </div>
-        </form>
-      </section>
-      <section class="tabs">
-        <div role="tablist" aria-label="Menu categories">
-          <button class="tabs_button" role="tab" aria-selected="true" id="tab-coffee-beverage"
-            aria-controls="panel-coffee-beverage" data-category="beverage">
-            coffee and beverage
-          </button>
-          <button class="tabs_button" role="tab" aria-selected="false" tabindex="-1" id="tab-food-snack"
-            aria-controls="panel-food-snack" data-category="food">
-            food and snack
-          </button>
-          <button class="tabs_button" role="tab" aria-selected="false" tabindex="-1" id="tab-at-home"
-            aria-controls="panel-at-home" data-category="home">
-            imaji coffee at home
-          </button>
+          <input type="text" id="search-input" name="search" placeholder="Enter keyword">
         </div>
-      </section>
-      <section class="all_products">
-        <ul class="list_products">
-          <!-- js add list products -->
-        </ul>
-        <div class="empty_list_products visually_hidden">Try changing filters or searching by a different name</div>
-      </section>
-      <section class="buttons">
-        <button class="bottom_list_products_button">load more</button>
-      </section>
-    </div>
-    <!-- remove visually_hidden, if need menu detail -->
-    <section class="visually_hidden landing_page_desktop_menu_detail">
-      <section class="menu_detail">
-        <div class="menu_detail_main_image">
-          <img src="/ImajiCoffee/assets/atHomeClassicBig-BJn6QtxK.jpg" alt="Black and green bag of IMAJI Coffee Classic single origin"
-            width="468">
+        <div class="filter_price">
+          <div class="filter_box">
+            <label for="price-select">Price</label>
+            <button type="button" data-clear="price" aria-label="clear price field">Clear</button>
+          </div>
+          <select id="price-selector" data-select="price-select" name="price">
+            <option value="all">All price</option>
+            <option value="0-10">Under $10</option>
+            <option value="10-plus">$10 over</option>
+          </select>
         </div>
-        <ul class="menu_detail_image_list">
-          <li><img src="data:image/jpeg;base64,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" alt="Black and green bag of IMAJI Coffee El. Azul" width="157"
-              height="164"></li>
-          <li><img src="/ImajiCoffee/assets/menuDetailImage2-C_ClqxUh.jpg" alt="Glass of black coffee on a bright green saucer with a spoon"
-              width="157" height="164">
-          </li>
-          <li><img src="/ImajiCoffee/assets/menuDetailImage3-Coaph250.jpg"
-              alt="Barista pouring water from a kettle into a pour-over coffee device" width="157" height="164"></li>
-          <li><img src="data:image/jpeg;base64,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"
-              alt="Close-up of a Chemex coffee maker with a filter and brewing coffee" width="157" height="164"></li>
-        </ul>
-        <div class="menu_detail_right">
-          <nav class="menu_detail_right_bread_crumb" aria-label="bread crumb">
-            <a href="/">Home</a>
-            <div>
-              <svg class="angle-right-small" width="6" height="10">
-                <use href="/ImajiCoffee/assets/sprite-DHpAVOE9.svg#angle" />
-              </svg>
+        <div class="filter_sort_by">
+          <div class="filter_box">
+            <label for="sort-selector">Sort By</label>
+            <button type="button" data-clear="sort" aria-label="clear sortBy field">Clear</button>
+          </div>
+          <select id="sort-selector" name="sort_by">
+            <option value="best-selling">Best Selling</option>
+            <option value="price-asc">From cheap to expensive</option>
+            <option value="price-desc">From expensive to cheap</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </form>
+    </section>
+    <section class="tabs">
+      <div role="tablist" aria-label="Menu categories">
+        <button class="tabs_button" role="tab" aria-selected="true" id="tab-coffee-beverage"
+          aria-controls="panel-coffee-beverage" data-category="beverage">
+          coffee and beverage
+        </button>
+        <button class="tabs_button" role="tab" aria-selected="false" tabindex="-1" id="tab-food-snack"
+          aria-controls="panel-food-snack" data-category="food">
+          food and snack
+        </button>
+        <button class="tabs_button" role="tab" aria-selected="false" tabindex="-1" id="tab-at-home"
+          aria-controls="panel-at-home" data-category="home">
+          imaji coffee at home
+        </button>
+      </div>
+    </section>
+    <section class="all_products">
+      <ul class="list_products">
+        <!-- js add list products -->
+      </ul>
+      <div class="empty_list_products visually_hidden">Try changing filters or searching by a different name</div>
+    </section>
+    <section class="buttons">
+      <button class="bottom_list_products_button">load more</button>
+    </section>
+  </div>
+</div>
+    <!-- <div class="container">
+  <section class="landing_page_desktop_menu_detail">
+    <section class="menu_detail">
+      <div class="menu_detail_main_image">
+        <img src="./images/atHomeClassicBig.jpg" alt="Black and green bag of IMAJI Coffee Classic single origin"
+          width="468">
+      </div>
+      <ul class="menu_detail_image_list">
+        <li><img src="./images/menuDetailImage1.jpg" alt="Black and green bag of IMAJI Coffee El. Azul" width="157"
+            height="164"></li>
+        <li><img src="./images/menuDetailImage2.jpg" alt="Glass of black coffee on a bright green saucer with a spoon"
+            width="157" height="164">
+        </li>
+        <li><img src="./images/menuDetailImage3.jpg"
+            alt="Barista pouring water from a kettle into a pour-over coffee device" width="157" height="164"></li>
+        <li><img src="./images/menuDetailImage4.jpg"
+            alt="Close-up of a Chemex coffee maker with a filter and brewing coffee" width="157" height="164"></li>
+      </ul>
+      <div class="menu_detail_right">
+        <nav class="menu_detail_right_bread_crumb" aria-label="bread crumb">
+          <a href="/">Home</a>
+          <div>
+            <svg class="angle-right-small" width="6" height="10">
+              <use href="images/icons/sprite.svg#angle" />
+            </svg>
+          </div>
+          <a href="/menu">Menu</a>
+          <div>
+            <svg class="angle-right-small" width="6" height="10">
+              <use href="images/icons/sprite.svg#angle" />
+            </svg>
+          </div>
+          <a href="/Details">Details</a>
+        </nav>
+        <div class="menu_detail_right_name">
+          <h3>At Home - Classic</h3>
+          <div class="price-promo">
+            <div class="price">
+              <p>$4.00</p>
+              <p class="crossed_out">$5.00</p>
             </div>
-            <a href="/menu">Menu</a>
-            <div>
-              <svg class="angle-right-small" width="6" height="10">
-                <use href="/ImajiCoffee/assets/sprite-DHpAVOE9.svg#angle" />
+            <p class="promo">Get 20% Off in App</p>
+          </div>
+        </div>
+        <div class="menu_detail_right_desc">
+          <p class="title">Description:</p>
+          <p class="text">An all-time favorite blend with citrus fruit character, caramel flavors, and a
+            pleasant faintly floral aroma.</p>
+          <p class="title">Locked scent:</p>
+          <p class="text">Excelso prevents air from entering the packaging with a locked aroma, ensuring
+            the coffee's
+            freshness. </p>
+          <p class="title">Storage Way:</p>
+          <p class="text">To maintain the taste of coffee and the freshness of the aroma, store Excelso
+            coffee in an
+            airtight. </p>
+          <a href="">Read less</a>
+        </div>
+        <div class="menu_detail_right_buttons">
+          <button class="button_add_cart">Add to Cart</button>
+          <div class="button_with">
+            <button aria-label="Reduce quantity">
+              <svg class="minus" width="16" height="16">
+                <use href="images/icons/sprite.svg#minus" />
               </svg>
+            </button>
+            <p>1</p>
+            <button aria-label="Increase quantity">
+              <svg class="minus" width="16" height="16">
+                <use href="images/icons/sprite.svg#plus" />
+              </svg>
+            </button>
+          </div>
+          <button class="button_buy_it_now">buy it now</button>
+        </div>
+      </div>
+    </section>
+    <section class="menu_list">
+      <h2>you may also like</h2>
+      <ul class="menu_list_flex">
+        <li class="product_card">
+          <article>
+            <div class="product_image">
+              <img src="./images/atHomeHouseBlend.jpg" alt="Black and dark blue bag of IMAJI Coffee House Blend"
+                width="262">
+              <img class="overlay" src="./images/overlayOutOfStock.png" alt="25 percent transparent black overlay"
+                width="262">
             </div>
-            <a href="/Details">Details</a>
-          </nav>
-          <div class="menu_detail_right_name">
-            <h3>At Home - Classic</h3>
+            <div class="product_card_name">
+              <h3>at home house blend</h3>
+              <p>available bye <span>at</span> website</p>
+            </div>
             <div class="price-promo">
               <div class="price">
-                <p>$4.00</p>
-                <p class="crossed_out">$5.00</p>
+                <p>$5.00</p>
+                <p class="crossed_out">$6.00</p>
               </div>
               <p class="promo">Get 20% Off in App</p>
             </div>
-          </div>
-          <div class="menu_detail_right_desc">
-            <p class="title">Description:</p>
-            <p class="text">An all-time favorite blend with citrus fruit character, caramel flavors, and a
-              pleasant faintly floral aroma.</p>
-            <p class="title">Locked scent:</p>
-            <p class="text">Excelso prevents air from entering the packaging with a locked aroma, ensuring
-              the coffee's
-              freshness. </p>
-            <p class="title">Storage Way:</p>
-            <p class="text">To maintain the taste of coffee and the freshness of the aroma, store Excelso
-              coffee in an
-              airtight. </p>
-            <a href="">Read less</a>
-          </div>
-          <div class="menu_detail_right_buttons">
-            <button class="button_add_cart">Add to Cart</button>
-            <div class="button_with">
-              <button aria-label="Reduce quantity">
-                <svg class="minus" width="16" height="16">
-                  <use href="/ImajiCoffee/assets/sprite-DHpAVOE9.svg#minus" />
-                </svg>
-              </button>
-              <p>1</p>
-              <button aria-label="Increase quantity">
-                <svg class="minus" width="16" height="16">
-                  <use href="/ImajiCoffee/assets/sprite-DHpAVOE9.svg#plus" />
-                </svg>
-              </button>
+            <p class="sale_badge">sale</p>
+          </article>
+        </li>
+        <li class="product_card">
+          <article>
+            <div class="product_image">
+              <img src="./images/atHomeArabica.jpg" alt="Black and brown bag of IMAJI Coffee Arabica" width="262">
+              <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                alt="25 percent transparent black overlay" width="262">
             </div>
-            <button class="button_buy_it_now">buy it now</button>
-          </div>
-        </div>
-      </section>
-      <section class="menu_list">
-        <h2>you may also like</h2>
-        <ul class="menu_list_flex">
-          <li class="product_card">
-            <article>
-              <div class="product_image">
-                <img src="/ImajiCoffee/assets/atHomeHouseBlend-DQaUi1sO.jpg" alt="Black and dark blue bag of IMAJI Coffee House Blend"
-                  width="262">
-                <img class="overlay" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAADUExURQAAAKd6PdoAAAABdFJOU0A2Opn2AAAAIklEQVRo3u3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAeBkttAAB/+kJawAAAABJRU5ErkJggg==" alt="25 percent transparent black overlay"
-                  width="262">
+            <div class="product_card_name">
+              <h3>at home arabica</h3>
+              <p>available bye <span>at</span> website</p>
+            </div>
+            <div class="price-promo">
+              <div class="price">
+                <p>$5.00</p>
+                <p class="crossed_out">$6.00</p>
               </div>
-              <div class="product_card_name">
-                <h3>at home house blend</h3>
-                <p>available bye <span>at</span> website</p>
+              <p class="promo">Get 20% Off in App</p>
+            </div>
+            <div class="visually_hidden out_of_stock_badge">
+              <p>Out of Stock</p>
+            </div>
+            <p class="sale_badge">sale</p>
+          </article>
+        </li>
+        <li class="product_card">
+          <article>
+            <div class="product_image">
+              <img src="./images/atHomeLuwak.jpg" alt="Black and dark brown bag of IMAJI Coffee Luwak" width="262">
+              <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                alt="25 percent transparent black overlay" width="262">
+            </div>
+            <div class="product_card_name">
+              <h3>at home luwak</h3>
+              <p>available bye <span>at</span> website</p>
+            </div>
+            <div class="price-promo">
+              <div class="price">
+                <p>$5.00</p>
+                <p class="crossed_out">$6.00</p>
               </div>
-              <div class="price-promo">
-                <div class="price">
-                  <p>$5.00</p>
-                  <p class="crossed_out">$6.00</p>
-                </div>
-                <p class="promo">Get 20% Off in App</p>
+              <p class="promo">Get 20% Off in App</p>
+            </div>
+            <div class="visually_hidden out_of_stock_badge">
+              <p>Out of Stock</p>
+            </div>
+            <p class="sale_badge">sale</p>
+          </article>
+        </li>
+        <li class="product_card">
+          <article>
+            <div class="product_image">
+              <img src="./images/atHomeLuwak.jpg" alt="Black and dark brown bag of IMAJI Coffee Luwak" width="262">
+              <img class="visually_hidden overlay" src="./images/overlayOutOfStock.png"
+                alt="25 percent transparent black overlay" width="262">
+            </div>
+            <div class="product_card_name">
+              <h3>at home luwak</h3>
+              <p>available bye <span>at</span> website</p>
+            </div>
+            <div class="price-promo">
+              <div class="price">
+                <p>$5.00</p>
+                <p class="crossed_out">$6.00</p>
               </div>
-              <p class="sale_badge">sale</p>
-            </article>
-          </li>
-          <li class="product_card">
-            <article>
-              <div class="product_image">
-                <img src="/ImajiCoffee/assets/atHomeArabica-Arz5OPic.jpg" alt="Black and brown bag of IMAJI Coffee Arabica" width="262">
-                <img class="visually_hidden overlay" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAADUExURQAAAKd6PdoAAAABdFJOU0A2Opn2AAAAIklEQVRo3u3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAeBkttAAB/+kJawAAAABJRU5ErkJggg=="
-                  alt="25 percent transparent black overlay" width="262">
-              </div>
-              <div class="product_card_name">
-                <h3>at home arabica</h3>
-                <p>available bye <span>at</span> website</p>
-              </div>
-              <div class="price-promo">
-                <div class="price">
-                  <p>$5.00</p>
-                  <p class="crossed_out">$6.00</p>
-                </div>
-                <p class="promo">Get 20% Off in App</p>
-              </div>
-              <div class="visually_hidden out_of_stock_badge">
-                <p>Out of Stock</p>
-              </div>
-              <p class="sale_badge">sale</p>
-            </article>
-          </li>
-          <li class="product_card">
-            <article>
-              <div class="product_image">
-                <img src="/ImajiCoffee/assets/atHomeLuwak-C0LI0I0y.jpg" alt="Black and dark brown bag of IMAJI Coffee Luwak" width="262">
-                <img class="visually_hidden overlay" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAADUExURQAAAKd6PdoAAAABdFJOU0A2Opn2AAAAIklEQVRo3u3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAeBkttAAB/+kJawAAAABJRU5ErkJggg=="
-                  alt="25 percent transparent black overlay" width="262">
-              </div>
-              <div class="product_card_name">
-                <h3>at home luwak</h3>
-                <p>available bye <span>at</span> website</p>
-              </div>
-              <div class="price-promo">
-                <div class="price">
-                  <p>$5.00</p>
-                  <p class="crossed_out">$6.00</p>
-                </div>
-                <p class="promo">Get 20% Off in App</p>
-              </div>
-              <div class="visually_hidden out_of_stock_badge">
-                <p>Out of Stock</p>
-              </div>
-              <p class="sale_badge">sale</p>
-            </article>
-          </li>
-          <li class="product_card">
-            <article>
-              <div class="product_image">
-                <img src="/ImajiCoffee/assets/atHomeLuwak-C0LI0I0y.jpg" alt="Black and dark brown bag of IMAJI Coffee Luwak" width="262">
-                <img class="visually_hidden overlay" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAADUExURQAAAKd6PdoAAAABdFJOU0A2Opn2AAAAIklEQVRo3u3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAeBkttAAB/+kJawAAAABJRU5ErkJggg=="
-                  alt="25 percent transparent black overlay" width="262">
-              </div>
-              <div class="product_card_name">
-                <h3>at home luwak</h3>
-                <p>available bye <span>at</span> website</p>
-              </div>
-              <div class="price-promo">
-                <div class="price">
-                  <p>$5.00</p>
-                  <p class="crossed_out">$6.00</p>
-                </div>
-                <p class="promo">Get 20% Off in App</p>
-              </div>
-              <div class="visually_hidden out_of_stock_badge">
-                <p>Out of Stock</p>
-              </div>
-              <p class="sale_badge">sale</p>
-            </article>
-          </li>
-        </ul>
-        <div class="menu_List_paging">
-          <svg class="icon" width="16" height="16">
-            <use href="/ImajiCoffee/assets/sprite-DHpAVOE9.svg#pading" />
-          </svg>
-          <svg class="icon active" width="16" height="16">
-            <use href="/ImajiCoffee/assets/sprite-DHpAVOE9.svg#pading" />
-          </svg>
-          <svg class="icon" width="16" height="16">
-            <use href="/ImajiCoffee/assets/sprite-DHpAVOE9.svg#pading" />
-          </svg>
-        </div>
-      </section>
+              <p class="promo">Get 20% Off in App</p>
+            </div>
+            <div class="visually_hidden out_of_stock_badge">
+              <p>Out of Stock</p>
+            </div>
+            <p class="sale_badge">sale</p>
+          </article>
+        </li>
+      </ul>
+      <div class="menu_List_paging">
+        <svg class="icon" width="16" height="16">
+          <use href="images/icons/sprite.svg#pading" />
+        </svg>
+        <svg class="icon active" width="16" height="16">
+          <use href="images/icons/sprite.svg#pading" />
+        </svg>
+        <svg class="icon" width="16" height="16">
+          <use href="images/icons/sprite.svg#pading" />
+        </svg>
+      </div>
     </section>
+  </section>
+</div> -->
   </main>
   <footer>
   <div class="footer_content">

@@ -24,4 +24,4 @@
       </article>
     </li>
   `};async function A(t={category:f}){try{$=await h.getAll(),n()}catch(e){console.error("Failed to load products:",e),l.innerHTML="<p>Error loading menu</p>"}}document.addEventListener("DOMContentLoaded",A);
-//# sourceMappingURL=main-22d7D3uc.js.map
+//# sourceMappingURL=main-DUL9epLh.js.map
